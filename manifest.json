@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Shorts Playback Controls",
+    "version": "1.0",
+    "description": "Add playback controls to YouTube Shorts with keyboard shortcuts.",
+    "permissions": ["scripting", "tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/shorts/*"],
+        "js": ["content.js"],
+        "css": ["style.css"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    },
+    "host_permissions": ["*://www.youtube.com/*"],
+    "action": {
+      "default_icon": {
+        "48": "icon.png"
+      }
+    }
+  }
+  
