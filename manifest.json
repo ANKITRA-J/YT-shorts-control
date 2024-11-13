@@ -15,12 +15,12 @@
       }
     ],
     "icons": {
-      "48": "icon.png"
+      "48": "icon1.png"
     },
     "host_permissions": ["*://www.youtube.com/*"],
     "action": {
       "default_icon": {
-        "48": "icon.png"
+        "48": "icon1.png"
       }
     }
   }
