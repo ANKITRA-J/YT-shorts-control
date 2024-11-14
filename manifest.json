@@ -4,17 +4,19 @@
   "version": "1.0",
   "description": "Add playback controls to YouTube Shorts with keyboard shortcuts.",
   "permissions": [
-    "tabs",
+    "activeTab",
     "*://www.youtube.com/*"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/shorts/*"],
       "js": ["content.js"],
-      "css": ["style.css"]
+      "css": ["style.css"],
+      "run_at": "document_end"
     }
   ],
   "icons": {
@@ -23,6 +25,7 @@
   "browser_action": {
     "default_icon": {
       "48": "icon1.png"
-    }
+    },
+    "default_title": "YouTube Shorts Controls"
   }
 }
